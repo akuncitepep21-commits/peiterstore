@@ -1064,7 +1064,7 @@ print("[BOOT] Part 1/5 selesai — Core + SDP + Player + i18n")
 # ══════════════════════════════════════════════════════════════════
 #  TELEGRAM API (with retry + rate limit handling)
 # ══════════════════════════════════════════════════════════════════
-def tg_api(method, **payload, max_retries=3):
+def tg_api(method, max_retries=3, **payload):
     """Telegram API call with retry + rate limit handling."""
     for attempt in range(max_retries):
         try:
